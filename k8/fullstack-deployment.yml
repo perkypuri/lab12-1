@@ -87,7 +87,7 @@ spec:
     - protocol: TCP
       port: 2000
       targetPort: 2000
-      nodePort: 30036       # Optional fixed NodePort (range 30000–32767)
+      nodePort: 30036        # Optional fixed NodePort (range 30000–32767)
   type: NodePort
 ---
 # ===========================
@@ -110,7 +110,7 @@ spec:
     spec:
       containers:
         - name: frontend
-image: perkypuri/k8-frontend:latest  # <-- change this
+          image: perkypuri/k8-frontend:latest  # <-- change this
           ports:
             - containerPort: 80
 ---
@@ -126,6 +126,8 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30035     # Optional fixed NodePort (range 30000–32767)
+      nodePort: 30035        # Optional fixed NodePort (range 30000–32767)
   type: NodePort
+
+
 
